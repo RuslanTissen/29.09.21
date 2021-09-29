@@ -1,0 +1,166 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+flex-direction: column;
+}
+
+main {
+    background-color: black;
+    width: 850px;
+    height: 850px;
+    margin: 0px auto;
+    display: flex;
+   
+    position: relative;
+    transition: 3s ease-in-out;
+}
+
+section {
+    background-color: rgb(68, 50, 42);
+    width: 800px;
+    height: 800px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.white {
+    background-color: rgb(237, 199, 126);
+    width: 100px;
+    height: 100px;
+}
+
+.black {
+    background-color: rgb(68, 50, 42);
+    width: 100px;
+    height: 100px;
+}
+
+.w-pawn {
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s ease;
+}
+
+.b-pawn {
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s ease;
+}
+
+.b-figure {
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s ease;
+}
+
+.w-figure {
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s ease;
+}
+
+/* ============nav=============== */
+
+nav {
+    width: 800px;
+    height: 25px;
+    position: absolute;
+    left: 25px;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.hr-nav {
+    width: 100px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+aside {
+    position: absolute;
+    top: 25px;
+}
+
+.vr-nav {
+    height: 100px;
+    width: 25px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===========hover========== */
+
+.nm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    transition: .5s ease;
+}
+
+.nm p {
+    opacity: 0;
+}
+
+.nm p:hover {
+    opacity: 1;
+    color: red;
+}
+
+.b-figure:hover,
+.b-pawn:hover,
+.w-figure:hover,
+.w-pawn:hover {
+    text-shadow: 4px 4px 2px rgba(246, 248, 244, 1);
+    font-size: 4.5rem;
+}
+
+input {
+    display: none;
+}
+
+.toggle {
+    background-color: rgb(119, 218, 119);
+    width: 200px;
+    height: 45px;
+
+    border-radius: 15px;
+    margin: 50px auto 150px auto;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(9, 150, 206);
+    font-weight: bold;
+    transition: 1.5s ease-in-out;
+}
+
+input:checked~main {
+    transform: rotate(90deg);
+}
+
+input:checked+label {
+    background-color: rgb(135,206,250);
+    transform: scale(1.1);
+    -webkit-box-shadow: 24px 16px 15px 5px #000000; 
+    box-shadow: 24px 16px 15px 5px #000000;
+    color: red;
+}
